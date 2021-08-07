@@ -1,0 +1,61 @@
+libLZR - A library to de- and encode LZR streams (as used in the Sony PSP firmware)
+
+libLZR Version 0.11 by BenHur - http://www.psp-programming.com/benhur
+
+
+-=Info=-
+
+The library de- and encodes LZR streams (as used in the Sony PSP firmware).
+
+Decompression results should be identical to Sonys internal decompression algorithm.
+Please report incompatible streams to benhur(at)alpenjodel(dot)de.
+
+Compression currently does not actually compress the data, but only produces a valid 
+LZR stream. Future versions of this library might implement real compression.
+
+
+-=Samples=-
+
+There is currently no sample included due to the simple nature of this library.
+A typical usage might be (out points to output array, in points to LZR stream):
+int ret = LZRDecompress(out, out_capacity, in, NULL);
+
+
+-=Dependencies=-
+
+none
+
+
+-=Changelog=-
+
+0.11  - bug fixed where certain LZR streams were not decompressed correctly
+      - potential bug fixed that could prevent correct decompression of certain LZR streams
+      - initial public release
+
+0.10  - initial release (not public)
+
+
+-=Credits=-
+
+Dark_Alex for his help with the LZR format
+
+
+-=License=-
+
+This is released under the Creative Commons Attribution-Share Alike 3.0 License.
+See LICENSE for more information.
+
+
+-=Atttribution=-
+
+With accordance to the license, the following must be adhered to:
+
+If you use the code in any way, shape or form you must attribute it in the following way:
+
+'Uses libLZR by BenHur'
+
+If you alter the code in any way, shape or form you must also release the updated code
+under the same license.
+
+See http://creativecommons.org/licenses/by-sa/3.0/ if you need more information.
+ 
